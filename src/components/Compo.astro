@@ -1,0 +1,25 @@
+---
+---
+
+<script defer>
+  const context = {
+    data: 5,
+  };
+  setTimeout(() => {
+    const doc = document.getElementById('id');
+    setInterval(() => {
+      context.data = context.data + 1;
+      console.log(context);
+      if (doc) {
+        doc.innerHTML = context.data.toLocaleString();
+      }
+    }, 400);
+    doc.addEventListener('click', click);
+    function click() {
+      console.log('clicked');
+      context.data = context.data + 100;
+    }
+  }, 200);
+</script>
+
+<div id='id' class='w-32 bg-slate-800 text-white cursor-pointer'>5</div>

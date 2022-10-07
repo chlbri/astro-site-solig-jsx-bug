@@ -1,0 +1,17 @@
+---
+export type Props = {
+  href: string;
+};
+
+Astro.props as Props;
+
+const props = {
+  class:
+    'text-gray-500 block no-underline text-sm uppercase py-3 hover:text-blue-400 focus:text-blue-400',
+  href: Astro.props.href,
+};
+---
+
+<a {...props}>
+  <slot />
+</a>

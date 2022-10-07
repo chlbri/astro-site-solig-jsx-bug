@@ -1,0 +1,15 @@
+---
+export type Props = {
+  pathDefinition: string;
+};
+
+const { pathDefinition } = Astro.props as Props;
+---
+
+<svg
+  class='w-5 h-5 fill-gray-500 transition-colors ease-linear duration-150 transform hover:fill-blue-400 block'
+  xmlns='http://www.w3.org/2000/svg'
+  viewBox='0 0 16 16'
+>
+  <path d={pathDefinition}></path>
+</svg>
