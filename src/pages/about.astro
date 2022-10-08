@@ -1,6 +1,6 @@
 ---
-import { Compo, Footer } from '../components';
-import { Ligth } from '../components/Ligth';
+import { Counter } from 'src/components/Counter';
+import Footer from 'src/components/Footer.astro';
 import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
 ---
@@ -35,8 +35,7 @@ import Nav from '../components/Nav.astro';
   </head>
   <body>
     <Nav />
-    <Compo />
-    <Ligth data='Toto' />
+    <Counter client:idle />
     <div class='wrapper bg-red-500'>
       <h1>About Jeanine</h1>
       <div class='heroImg'>
@@ -44,6 +43,7 @@ import Nav from '../components/Nav.astro';
           width='1400'
           height='350'
           src='https://images.unsplash.com/photo-1581977012607-4091712d36f9?auto=format&fit=crop&w=1400&h=350&q=75'
+          alt='about'
         />
       </div>
       <div class='bio wrapper'>
